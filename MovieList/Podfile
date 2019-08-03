@@ -1,0 +1,7 @@
+platform :ios, '12.4'
+use_frameworks!
+
+target 'MovieList' do
+  pod 'Alamofire', '~> 5.0.0-beta.7'
+  pod 'Kingfisher', '~> 5.7.0'
+end
