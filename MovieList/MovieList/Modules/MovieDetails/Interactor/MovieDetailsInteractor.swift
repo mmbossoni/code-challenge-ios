@@ -8,16 +8,6 @@
 
 import Foundation
 
-protocol MovieDetailsInteractorOutputProtocol: class {
-    func didRetrieveMovieDetails(movie: MovieViewModel)
-    func errorDidOccur(error: Error)
-}
-
-protocol MovieDetailsInteractorInputProtocol {
-    var presenter: MovieDetailsInteractorOutputProtocol? { get set }
-    func loadMovieDetails(for movieId: Int)
-}
-
 class MovieDetailsInteractor: MovieDetailsInteractorInputProtocol {
     private var movieService: MovieServiceProtocol
     weak var presenter: MovieDetailsInteractorOutputProtocol?

@@ -9,14 +9,6 @@
 import UIKit
 import Kingfisher
 
-protocol UpcomingMoviesViewProtocol: class {
-    var presenter: UpcomingMoviesPresenterProtocol? { get set }
-    
-    func showError(error: Error)
-    func showLoading(show: Bool)
-    func showMovies(movies: [MovieViewModel])
-}
-
 class UpcomingMoviesViewController: UICollectionViewController, UpcomingMoviesViewProtocol {
     private var movies: [MovieViewModel] = []
     private var searchController: UISearchController!

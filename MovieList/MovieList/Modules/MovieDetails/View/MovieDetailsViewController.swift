@@ -9,14 +9,6 @@
 import UIKit
 import Kingfisher
 
-protocol MovieDetailsViewProtocol: class {
-    var presenter: MovieDetailsPresenterProtocol? { get set }
-    
-    func showError(error: Error)
-    func showLoading(show: Bool)
-    func showMovieDetails(movie: MovieViewModel)
-}
-
 class MovieDetailsViewController: UIViewController, MovieDetailsViewProtocol {
     var presenter: MovieDetailsPresenterProtocol?
     private var movie: MovieViewModel?

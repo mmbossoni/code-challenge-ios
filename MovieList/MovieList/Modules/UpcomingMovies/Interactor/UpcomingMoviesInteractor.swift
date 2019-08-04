@@ -8,18 +8,6 @@
 
 import Foundation
 
-protocol UpcomingMoviesInteractorOutputProtocol: class {
-    func didRetrieveMovies(movies: [MovieModel])
-    func errorDidOccur(error: Error)
-    func searchDidFinish(movies: [MovieModel])
-}
-
-protocol UpcomingMoviesInteractorInputProtocol {
-    var presenter: UpcomingMoviesInteractorOutputProtocol? { get set }
-    func loadNextUpcomingMoviesPage()
-    func searchMovies(query: String)
-}
-
 class UpcomingMoviesInteractor: UpcomingMoviesInteractorInputProtocol {
     private var lastSuccessPage: Int = 0;
     private var movieService: MovieServiceProtocol

@@ -8,14 +8,6 @@
 
 import UIKit
 
-protocol UpcomingMoviesConfiguratorProtocol {
-    static func createUpcomingMoviesModule() -> UIViewController
-}
-
-protocol UpcomingMoviesRouterProtocol {
-    func showMovieDetails(from view: UpcomingMoviesViewProtocol, for movieId: Int)
-}
-
 class UpcomingMoviesRouter: UpcomingMoviesRouterProtocol, UpcomingMoviesConfiguratorProtocol {
     static var storyboard = UIStoryboard(name: "UpcomingMovies", bundle: Bundle.main)
     static let screenId = "UpcomingMoviesNavigation"

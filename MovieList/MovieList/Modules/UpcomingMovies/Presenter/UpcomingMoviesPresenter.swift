@@ -8,18 +8,6 @@
 
 import Foundation
 
-protocol UpcomingMoviesPresenterProtocol {
-    var view: UpcomingMoviesViewProtocol? { get set }
-    var interactor: UpcomingMoviesInteractorInputProtocol? { get set }
-    var router: UpcomingMoviesRouterProtocol? { get set }
-    
-    func viewDidLoad()
-    func userDidRequestMoreMovies()
-    func userDidSelectMovie(movie: MovieViewModel)
-    func userDidSearchMovies(query: String)
-    func searchDidFinish()
-}
-
 class UpcomingMoviesPresenter: UpcomingMoviesPresenterProtocol, UpcomingMoviesInteractorOutputProtocol {
     
     private var loadingCount = 0

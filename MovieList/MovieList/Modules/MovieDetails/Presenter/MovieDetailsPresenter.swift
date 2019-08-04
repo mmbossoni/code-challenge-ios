@@ -8,15 +8,6 @@
 
 import Foundation
 
-protocol MovieDetailsPresenterProtocol {
-    var view: MovieDetailsViewProtocol? { get set }
-    var interactor: MovieDetailsInteractorInputProtocol? { get set }
-    var router: MovieDetailsRouterProtocol? { get set }
-    var movieId: Int? { get set }
-    
-    func viewDidLoad()
-}
-
 class MovieDetailsPresenter: MovieDetailsPresenterProtocol, MovieDetailsInteractorOutputProtocol {
     
     // MARK: MovieDetailsPresenterProtocol
